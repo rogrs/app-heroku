@@ -12,8 +12,6 @@ import org.springframework.core.io.ClassPathResource;
 
 public final class DefaultProfileUtil {
 
-    private static final long serialVersionUID = 1L;
-
     private static final Logger log = LoggerFactory.getLogger(DefaultProfileUtil.class);
 
     private static final String SPRING_PROFILE_ACTIVE = "spring.profiles.active";
