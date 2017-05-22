@@ -1,4 +1,4 @@
-package br.com.rogrs;
+package br.com.rogrs.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
