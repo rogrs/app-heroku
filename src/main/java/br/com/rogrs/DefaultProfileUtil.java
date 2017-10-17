@@ -18,9 +18,6 @@ public final class DefaultProfileUtil {
 
     private static final Properties BUILD_PROPERTIES = readProperties();
 
-    /**
-     * Get a default profile from <code>application.yml</code>.
-     */
     public static String getDefaultActiveProfiles(){
         if (BUILD_PROPERTIES != null) {
             String activeProfile = BUILD_PROPERTIES.getProperty(SPRING_PROFILE_ACTIVE);
@@ -48,9 +45,7 @@ public final class DefaultProfileUtil {
         app.setDefaultProperties(defProperties);
     }
 
-    /**
-     * Load application.yml from classpath.
-     */
+   
     private static Properties readProperties() {
         try {
             YamlPropertiesFactoryBean factory = new YamlPropertiesFactoryBean();
