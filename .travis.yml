@@ -1,5 +1,11 @@
 language: java
 sudo: false
-script: mvn clean verify cobertura:cobertura
+
+jdk:
+  - oraclejdk8
+script:
+  - ./mvnw clean
+  - ./mvnw test
+  - ./mvnw package -Pprod -DskipTests
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - mvn jacoco:report coveralls:report
