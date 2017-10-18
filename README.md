@@ -1,4 +1,4 @@
-# Spring Boot Heroku demo [![Build Status](https://travis-ci.org/rogrs/app-heroku.svg?branch=master)](https://travis-ci.org/rogrs/app-heroku) [![Dependency Status](https://david-dm.org/rogrs/app-heroku.svg)](https://david-dm.org/rogrs/app-heroku) [![devDependency Status](https://david-dm.org/rogrs/app-heroku/dev-status.svg)](https://david-dm.org/rogrs/app-heroku#info=devDependencies) [![peerDependency Status](https://david-dm.org/rogrs/app-heroku/peer-status.svg)](https://david-dm.org/rogrs/app-heroku#info=peerDependencies)
+# Spring Boot Heroku demo [![Build Status](https://travis-ci.org/rogrs/app-heroku.svg?branch=master)](https://travis-ci.org/rogrs/app-heroku) 
 
 > Projeto de Crud utilizando Java, springboot e Postgres SQL
 
