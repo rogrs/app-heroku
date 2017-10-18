@@ -24,7 +24,7 @@ public class CEPController {
 		Endereco endereco = viaCEPService.buscaCEP(cep);
 
 		if (null == endereco || endereco.isErro()) {
-			throw new ResourceNotFoundException("CEP não encontrado!");
+			throw new ResourceNotFoundException(String.format("O cep %s não existe!",cep));
 		}
 
 		return new ResponseEntity<>(endereco, HttpStatus.OK);
