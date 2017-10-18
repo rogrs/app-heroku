@@ -17,7 +17,7 @@ public class ViaCEPServiceTests {
 	@Autowired
 	private ViaCEPService wsCEPService;
 
-	@Test
+	/*@Test
 	public void testeBuscaCEP() throws Exception {
 
 		Endereco result = wsCEPService.buscaCEP("20541170");;
@@ -33,7 +33,7 @@ public class ViaCEPServiceTests {
 		assertNotNull(result);
 
 	}
-	
+	*/
 	
 	@Test
 	public void testeBuscaCEP3() throws Exception {
