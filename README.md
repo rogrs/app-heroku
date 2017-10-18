@@ -1,4 +1,5 @@
 # Spring Boot Heroku demo [![Build Status](https://travis-ci.org/rogrs/app-heroku.svg?branch=master)](https://travis-ci.org/rogrs/app-heroku) 
+[![codecov](https://codecov.io/gh/rogrs/app-heroku/branch/master/graph/badge.svg)](https://codecov.io/gh/rogrs/app-heroku)
 
 > Projeto de Crud utilizando Java, springboot e Postgres SQL
 
