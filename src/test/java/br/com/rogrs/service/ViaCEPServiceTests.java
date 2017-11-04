@@ -2,7 +2,6 @@ package br.com.rogrs.service;
 
 import static org.junit.Assert.assertNotNull;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,34 +10,33 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import br.com.rogrs.model.Endereco;
 
-//@RunWith(SpringRunner.class)
-//@SpringBootTest
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class ViaCEPServiceTests {
 
-	//@Autowired
-	//private ViaCEPService wsCEPService;
+	@Autowired
+	private ViaCEPService wsCEPService;
+	
+	
+	private static final String CEP_SUCESSO ="20541170";
+	private static final String CEP_ERRO ="11111111";
 
 	@Test
 	public void testeBuscaCEP() throws Exception {
 
-		Endereco result = new Endereco();//wsCEPService.buscaCEP("20541170");;
+		Endereco result = wsCEPService.buscaCEP(CEP_SUCESSO);;
 		assertNotNull(result);
+		assertNotNull(result.getCep());
+		assertNotNull(result.getBairro());
+		assertNotNull(result.toString());
 
 	}
 	
+
 	@Test
-	public void testeBuscaCEP2() throws Exception {
+	public void testeBuscaCEPError() throws Exception {
 
-		Endereco result =  new Endereco();//wsCEPService.buscaCEP("20541173");
-		assertNotNull(result);
-
-	}
-	
-	
-	@Test
-	public void testeBuscaCEP3() throws Exception {
-
-		Endereco result = new Endereco();// wsCEPService.buscaCEP("11111111");
+		Endereco result =  wsCEPService.buscaCEP(CEP_ERRO);
 		assertNotNull(result);
 
 	}
