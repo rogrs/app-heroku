@@ -18,8 +18,8 @@ public class ViaCEPServiceTests {
 	private ViaCEPService wsCEPService;
 	
 	
-	private static final String CEP_SUCESSO ="20541170";
-	private static final String CEP_ERRO ="11111111";
+	private static final Endereco CEP_SUCESSO = new Endereco("20541170");
+	private static final Endereco CEP_ERRO = new Endereco("1111111");
 
 	@Test
 	public void testeBuscaCEP() throws Exception {

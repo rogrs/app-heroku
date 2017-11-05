@@ -1,9 +1,23 @@
 package br.com.rogrs.model;
 
-public class Endereco {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+@Entity
+@Table(name = "ENDERECO")
+public class Endereco extends AbstractPersistable<Long> {
+
+	@Transient
+	private static final long serialVersionUID = 1L;
+
+	@Transient
 	private static String FORMAT = "Endereco{cep='%s', logradouro='%s', complemento='%s', bairro='%s', localidade='%s', uf='%s', unidade='%s', ibge='%s', gia='%s', erro=%s}'";
 
+	@NotEmpty
 	private String cep;
 	private String logradouro;
 	private String complemento;
@@ -14,6 +28,14 @@ public class Endereco {
 	private String ibge;
 	private String gia;
 	private boolean erro;
+
+	public Endereco() {
+
+	}
+
+	public Endereco(String cep) {
+		this.cep = cep;
+	}
 
 	public String getCep() {
 		return cep;
@@ -86,12 +108,9 @@ public class Endereco {
 	public void setGia(String gia) {
 		this.gia = gia;
 	}
-	
+
 	public boolean isErro() {
 		return erro;
-	}
-	public void setErro(boolean erro) {
-		this.erro = erro;
 	}
 
 	@Override

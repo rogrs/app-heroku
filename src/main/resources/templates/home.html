@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
-
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Spring Boot Heroku Example</title>
+    <title>App Heroku Example</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
@@ -13,15 +12,16 @@
 <body>
 <div class="container">
     <div class="page-header">
-        <h1>Spring Boot Heroku Example</h1>
+        <h1>App Heroku Example</h1>
+       
     </div>
 
     <div class="row">
         <div class="col-md-12 col-lg-6">
             <form th:object="${insertRecord}" method="POST">
                 <div class="form-group">
-                    <label for="data">Record to insert</label>
-                    <input id="data" type="text" class="form-control" placeholder="Lorem ipsum" th:field="*{data}" />
+                    <label for="data">Informe o número do CEP</label>
+                    <input id="cep" type="text" class="form-control" placeholder="Número do CEP" th:field="*{cep}" />
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
@@ -34,12 +34,28 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Records</th>
+                        <th>CEP</th>
+                        <th>Logradouro</th>
+                        <th>Complemento</th>
+                        <th>Bairro</th>
+                        <th>Localidade</th>
+                        <th>UF</th>
+                        <th>Unidade</th>
+                        <th>IBGE</th>
+                        <th>GIA</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="record : ${records}">
-                        <td th:text="${record.data}">Some text</td>
+                        <td th:text="${record.cep}">Some text</td>
+                        <td th:text="${record.logradouro}">Some text</td>
+                        <td th:text="${record.complemento}">Some text</td>
+                        <td th:text="${record.bairro}">Some text</td>
+                        <td th:text="${record.localidade}">Some text</td>
+                        <td th:text="${record.uf}">Some text</td>
+                        <td th:text="${record.unidade}">Some text</td>
+                        <td th:text="${record.ibge}">Some text</td>
+                        <td th:text="${record.gia}">Some text</td>
                     </tr>
                 </tbody>
             </table>
